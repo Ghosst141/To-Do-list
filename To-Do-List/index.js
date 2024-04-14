@@ -33,8 +33,11 @@ function addtodo() {
         li.remove();
     })
 
-    if (textfield.value) {
+    const fc=document.querySelector('li:nth-child(1)');
+    if (textfield.value && !fc) {
         ul.appendChild(li)
     }
+    else{
+   
     textfield.value="";
 }
